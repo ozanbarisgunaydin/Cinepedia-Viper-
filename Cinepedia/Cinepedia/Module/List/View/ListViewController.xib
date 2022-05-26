@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="Cinepedia" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="JKZ-gk-t1e" id="TLa-do-M16"/>
+                <outlet property="pageController" destination="jho-Yq-iSu" id="pGP-NL-AL4"/>
+                <outlet property="searchBar" destination="y1C-I8-xBl" id="dMN-KU-YYj"/>
+                <outlet property="tableView" destination="3YR-mQ-HHq" id="Yre-UU-AkT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JKZ-gk-t1e">
+                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Fvk-pz-esa"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="KHD-Ec-Udn" customClass="CollectionViewPagingLayout" customModule="Cinepedia" customModuleProvider="target">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jho-Yq-iSu">
+                    <rect key="frame" x="0.0" y="218" width="414" height="26"/>
+                    <connections>
+                        <action selector="pageControllerAction:" destination="-1" eventType="valueChanged" id="8LY-Sc-dEY"/>
+                    </connections>
+                </pageControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3YR-mQ-HHq">
+                    <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jho-Yq-iSu" secondAttribute="trailing" id="0m8-N1-8dB"/>
+                <constraint firstItem="3YR-mQ-HHq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CEW-mD-UHJ"/>
+                <constraint firstItem="JKZ-gk-t1e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dv0-td-oBe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3YR-mQ-HHq" secondAttribute="trailing" id="FbR-3S-Nn2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JKZ-gk-t1e" secondAttribute="trailing" id="PS4-G9-eo3"/>
+                <constraint firstItem="jho-Yq-iSu" firstAttribute="bottom" secondItem="JKZ-gk-t1e" secondAttribute="bottom" id="bag-5M-EB9"/>
+                <constraint firstItem="JKZ-gk-t1e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="euv-UK-GXI"/>
+                <constraint firstItem="3YR-mQ-HHq" firstAttribute="top" secondItem="JKZ-gk-t1e" secondAttribute="bottom" id="g4X-B8-xpP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3YR-mQ-HHq" secondAttribute="bottom" id="wQC-bp-mWJ"/>
+                <constraint firstItem="jho-Yq-iSu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wlK-v3-5Bd"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="132"/>
+        </view>
+        <searchBar contentMode="redraw" placeholder="Search" id="y1C-I8-xBl">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <textInputTraits key="textInputTraits"/>
+            <point key="canvasLocation" x="138" y="-223"/>
+        </searchBar>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
